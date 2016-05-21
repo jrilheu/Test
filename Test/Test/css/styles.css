@@ -1,0 +1,41 @@
+﻿.activity-container {
+    padding: 15px;
+}
+.activity-container .provider { 
+    color: #A156E5;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.actor {
+    color: #365899;
+    font-weight: bold;
+}
+.actor-details {
+    padding: 15px 0 0 0;
+}
+.attachment {
+    width: 100%; 
+}
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.counters {
+    border-top: solid 1px #EEEEEE;
+    font-size: 12px;
+    padding: 5px 0;
+}
+.date {
+    font-size: 11px;
+    color: rgb(126,124,124);
+}
+.even {
+    background-color: rgb(229,229,229);
+}
+.lnk-location:hover {
+    text-decoration: none;
+}
