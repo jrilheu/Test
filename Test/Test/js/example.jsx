@@ -27,7 +27,7 @@ const ActivityContainerList = React.createClass({
             </div>
         );
     },
-    renderListOrdered : function(activityListParts){
+    renderListOrdered : function(activityListParts) {
         return (<div className="row">{activityListParts}</div>);
     },
     renderActvityParts(rowsSlice, oldIndex) {
@@ -43,6 +43,12 @@ const ActivityContainerList = React.createClass({
 //Activity Card
 const ActivityContainer = React.createClass({
     displayName: "ActivityContainer",
+    renderLogoProvider: function (provider) {
+        var classLogo = "fa fa-";
+        classLogo += provider;
+        var logoProvider = (<span><i className={classLogo} aria-hidden="true"></i> {provider}</span>);
+        return logoProvider;
+    },
     render: function () {
         var location = "";
         if (this.props.data.activity_latitude != null) {
@@ -62,14 +68,14 @@ const ActivityContainer = React.createClass({
         }
         return (
             <div className={classes}>
-                <div className="text-right provider">{this.props.data.provider}</div>
+                <div className="text-right provider">{this.renderLogoProvider(this.props.data.provider)}</div>
                 <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-xs-6">
                         <a href={this.props.data.actor_url} target="_blank">
                             <img src={avator + "?size=100x100"} />
                         </a>
                     </div>
-                    <div className="col-md-6 actor-details">
+                    <div className="col-xs-6 actor-details">
                         <a href={this.props.data.actor_url} target="_blank">
                             <p className="actor">{this.props.data.actor_name}</p>
                         </a>
@@ -86,10 +92,10 @@ const ActivityContainer = React.createClass({
                     {location}
                 </div>
                 <div className="row counters">
-                    <div className="col-md-4">
+                    <div className="col-xs-4">
                         {this.props.data.activity_likes + " likes"}
                     </div>
-                    <div className="col-md-8 text-right">
+                    <div className="col-xs-8 text-right">
                         {this.props.data.activity_comments + " comments "}
                         {this.props.data.activity_shares + "  shares"}
                     </div>

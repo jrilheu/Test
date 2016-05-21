@@ -3,8 +3,12 @@
 }
 .activity-container .provider { 
     color: #A156E5;
-    font-size: 16px;
-    text-transform: capitalize;
+    font-style: italic;
+    /*font-size: 16px;*/
+    /*text-transform: capitalize;*/
+}
+.activity-container .provider .fa {
+    font-size: 20px;
 }
 .actor {
     color: #365899;
